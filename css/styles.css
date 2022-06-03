@@ -10,9 +10,29 @@
     --body-color: #fff;
 }
 
+/* *    {
+    outline: 1px dashed rgb(154, 66, 154);
+} */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
 body {
     font-family: 'Roboto', 'Tahoma', 'Verdana', sans-serif;
     font-style: normal;
+    font-weight: 700;
     background-color: var(--body-color);
     color: #212121;
     width: 1600px;
@@ -20,25 +40,36 @@ body {
 
 /* шапка */
 .header {
-    width: 1600px;
+    max-width: 1600px;
     height: 80px;
     background: #fff;
+    border-bottom: 1px solid #ECECEC;
+    padding: 24px 0 25px;
 }
 
-/* .header-nav {} */
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
 
 .header-logo {
+    margin-right: 93px;
     color: #000;
 }
 
 .logo {
     font-family: 'Raleway', 'Verdana', sans-serif;
-    font-weight: 700;
+    font-weight: inherit;
+    width: 145px;
+    /* height: 31px; */
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    width: 145px;
-    height: 31px;
     text-decoration: none;
 }
 
@@ -46,14 +77,23 @@ body {
     color: var(--logo-web-color);
 }
 
-/* .header-list{} */
+.header-list {
+    display: flex;
+    align-items: center;
+}
 
 /* убирает стиль списка */
 .list {
     list-style: none;
 }
 
-/* .header-item {} */
+.header-item {
+    margin-right: 50px;
+}
+
+.header-item:last-child {
+    margin-right: 0;
+}
 
 .header-link {
     font-weight: 500;
@@ -77,8 +117,18 @@ body {
     color: var(--link-active-color);
 }
 
-/* .header-contacts {} */
-/* .contacts-item {} */
+.header-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts-item {
+    margin-left: 50px;
+}
+
+.contacts-item:first-child {
+    margin-left: 0;
+}
 
 .contacts-link {
     font-weight: 500;
@@ -94,22 +144,33 @@ body {
 }
 
 .hero {
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
-    margin-top: 80px;
+    padding: 200px 0;
     background: #2f303a;
+    align-items: center;
+    justify-items: center;
+}
+
+.hero .container {
+    /* display: flex; */
+    align-items: center;
+
 }
 
 .hero-heading {
     width: 696px;
-    height: 120px;
+    /* height: 120px; */
+    /* margin-bottom: 30px; */
+    /*не працює */
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #fff;
+    text-align: center;
+    margin: 0 auto 30px;
 }
 
 .btn {
@@ -118,18 +179,18 @@ body {
     cursor: pointer;
     font-family: inherit;
     font-style: inherit;
+    align-items: center;
+    justify-content: center;
 }
 
 .index-btn {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: #fff;
     width: 200px;
     height: 50px;
+    font-weight: inherit;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: #fff;
     background-color: #2196f3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -141,8 +202,10 @@ body {
 }
 
 /* преимущества */
-
-/* временно скрыто  .benefits { width: 1170px; height: 101px;} */
+.benefits {
+    width: 1170px;
+    height: 101px;
+}
 
 .hdn {
     position: absolute;
@@ -157,15 +220,19 @@ body {
     margin: -1px;
 }
 
-/* .benefits-list {} */
+.benefits-list {
+    display: flex;
+}
 
 .benefits-item {
     width: 270px;
 }
 
 .benefits-heading {
-    height: 16px;
-    font-weight: 700;
+    width: 270px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    font-weight: inherit;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -174,7 +241,8 @@ body {
 }
 
 .benefits-text {
-    height: 75px;
+    width: 270px;
+    /* padding-right: */
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -189,7 +257,7 @@ body {
 }
 
 .tasks-heading {
-    font-weight: 700;
+    font-weight: inherit;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -203,18 +271,20 @@ body {
 
 .tasks-item {
     width: 370px;
-    height: 294px;
+    /* height: 294px; */
+    flex-shrink: 0;
+    /*для того, щоб браузер не стискав картинки*/
 }
 
 /* команда */
 .team {
-    width: 1600px;
+    max-width: 1600px;
     height: 648px;
     background: #F5F4FA;
 }
 
 .team-heading {
-    font-weight: 700;
+    font-weight: inherit;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -224,22 +294,24 @@ body {
 
 .team-list {
     width: 1170px;
-    height: 368px;
+    /* height: 368px; */
     display: flex;
 }
 
 .team-item {
     width: 270px;
-    height: 368px;
+    /* height: 368px; */
     background-color: #ffffff;
-    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
 .team-photo {
     width: 270px;
-    height: 260px;
+    /* height: 260px; */
+    flex-shrink: 0;
+    /*для того, щоб браузер не стискав картинки*/
 }
 
 .img-name {
@@ -263,8 +335,9 @@ body {
 /* футер */
 .footer {
     background-color: var(--footer-back-clr);
-    width: 1600px;
+    max-width: 1600px;
     height: 252px;
+    padding: 60px 0;
 }
 
 .footer-logo {
@@ -273,7 +346,7 @@ body {
 
 .address {
     width: 231px;
-    height: 81px;
+    /* height: 81px; */
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -283,7 +356,7 @@ body {
 
 .address-text {
     width: 231px;
-    height: 21px;
+    /* height: 21px; */
     color: #fff;
 }
 
@@ -305,9 +378,11 @@ body {
     margin-bottom: 94px;
 }
 
-/* .buttons-list {display: flex;} */
+.buttons-list {
+    /* display: flex; */
+}
 
-/* .buttons-item {} ??? */
+.buttons-item {}
 
 .item-btn {
     font-weight: 500;
@@ -327,7 +402,7 @@ body {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* .projects-list {box-sizing: border-box;} */
+.projects-list {}
 
 .project-item {
     width: 370px;
@@ -342,7 +417,7 @@ body {
 }
 
 .project-heading {
-    font-weight: 700;
+    font-weight: inherit;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -359,4 +434,16 @@ body {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--subtitle-clr);
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    align-content: center;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
