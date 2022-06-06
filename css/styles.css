@@ -10,7 +10,9 @@
     --body-color: #fff;
 }
 
-/* * {outline: 1px dashed rgb(154, 66, 154);} */
+/* * {
+    outline: 1px dashed rgb(154, 66, 154);
+} */
 
 p,
 h1,
@@ -33,7 +35,19 @@ body {
     font-weight: 700;
     background-color: var(--body-color);
     color: #212121;
-    width: 1600px;
+}
+
+/* выравнивание */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    align-content: center;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* шапка */
@@ -217,6 +231,7 @@ body {
 .benefits {
     display: flex;
     align-items: center;
+    padding-top: 94px;
 }
 
 .benefits-list {
@@ -333,7 +348,10 @@ body {
     max-width: 100%;
     height: auto;
     /* flex-shrink: 0; */
-    margin-bottom: 30px;
+}
+
+.team-container {
+    padding: 30px 0;
 }
 
 .img-name {
@@ -343,7 +361,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--list-heading-clr);
-    margin: 0 auto;
+    margin: 0 auto 10px;
 }
 
 .img-prof {
@@ -353,7 +371,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--subtitle-clr);
-    margin: 10px auto 30px;
+    margin: auto 0;
 }
 
 /* футер */
@@ -486,16 +504,4 @@ body {
     letter-spacing: 0.03em;
     color: var(--subtitle-clr);
     margin: 0 auto;
-}
-
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    align-content: center;
-}
-
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
 }
